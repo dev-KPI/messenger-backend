@@ -5,14 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \": no test specified\"",
     "lint": "eslint . --ext .js",
-    "format": "prettier --write *.js"
+    "format": "prettier --write *.js",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": "npm run format; npm run lint"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^8.48.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "3.0.3"
   }
 }
