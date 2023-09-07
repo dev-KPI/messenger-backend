@@ -3,20 +3,25 @@
   "version": "1.0.0",
   "description": "Learn Node.js with fun🤪",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \": no test specified\"",
+    "test": "echo no test specified",
+    "lint:check": "eslint .",
+    "lint:write": "eslint --fix .",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "eslint"
-    ]
+    "*": "prettier --write --ignore-unknown",
+    "*.js": "eslint",
+    "*.ts": "eslint"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.4.9",
     "eslint": "^8.48.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
