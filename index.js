@@ -10,3 +10,4 @@ http
   .listen(PORT)
 
 console.log(`Server running at http://localhost:${PORT}/`)
+console.log('Hello World')
