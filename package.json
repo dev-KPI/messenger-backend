@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./lib/main.js",
+    "dev": "nodemon ./lib/main.js",
     "test": "echo no test specified",
     "lint:check": "eslint .",
     "lint:write": "eslint --fix .",
@@ -22,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "@fastify/cors": "^8.3.0",
+    "@prisma/client": "^5.3.1",
     "fastify": "^4.23.2",
     "pg": "^8.8.0",
     "pino": "^8.15.1",
@@ -31,9 +33,13 @@
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.4.10",
+    "@types/node": "^20.6.3",
     "eslint": "^8.49.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "prettier": "3.0.3"
+    "nodemon": "^3.0.1",
+    "prettier": "3.0.3",
+    "prisma": "^5.3.1",
+    "typescript": "^5.2.2"
   }
 }
