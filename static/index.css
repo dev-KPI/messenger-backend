@@ -1,0 +1,14 @@
+body {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 34px;
+  font-weight: bold;
+  color: #fdf6f6; /* Text color */
+}
