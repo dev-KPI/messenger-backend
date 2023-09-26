@@ -23,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "@fastify/cors": "^8.3.0",
+    "@fastify/websocket": "^8.2.0",
     "@prisma/client": "^5.3.1",
     "fastify": "^4.23.2",
     "pg": "^8.8.0",

@@ -1,6 +1,6 @@
 'use strict';
 
-const url = new URL('ws://localhost:8001');
+const url = new URL('http://localhost:8001');
 const structure = {
   user: {
     create: ['record'],

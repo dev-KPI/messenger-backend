@@ -5,7 +5,8 @@ module.exports = {
   api: {
     path: './api',
     port: 8001,
-    transport: 'ws',
+    framework: 'native',
+    transport: 'http',
   },
   static: {
     port: 8000,
