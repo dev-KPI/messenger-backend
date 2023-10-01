@@ -8,7 +8,29 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id        Int       @id @default(autoincrement())
+  username  String    @unique
+  email     String    @unique
+  password  String
+  messages  Message[] @relation("MessageSender")
+  chats     Chat[]    @relation("ChatToUsers")
+  createdAt DateTime  @default(now())
+}
+
+model Message {
+  id        Int      @id @default(autoincrement())
+  content   String
+  senderId  Int
+  sender    User     @relation("MessageSender", fields: [senderId], references: [id])
+  chatId    Int
+  chat      Chat     @relation(fields: [chatId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+model Chat {
+  id        Int       @id @default(autoincrement())
+  name      String?
+  users     User[]    @relation("ChatToUsers")
+  messages  Message[]
+  createdAt DateTime  @default(now())
 }
