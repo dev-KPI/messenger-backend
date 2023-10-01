@@ -4,20 +4,17 @@
   "description": "Learn Node.js with fun🤪",
   "main": "index.js",
   "type": "commonjs",
+  "types": "./global.d.ts",
   "scripts": {
     "start": "node ./lib/main.js",
     "dev": "nodemon ./lib/main.js",
     "test": "echo no test specified",
-    "lint:check": "eslint .",
-    "lint:write": "eslint --fix .",
-    "format:check": "prettier --check .",
-    "format:write": "prettier --write .",
+    "eslint:check": "eslint .",
+    "eslint:write": "eslint --fix .",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "typescript:check": "tsc -p tsconfig.json",
     "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*": "prettier --write --ignore-unknown",
-    "*.js": "eslint",
-    "*.ts": "eslint"
   },
   "author": "",
   "license": "MIT",
