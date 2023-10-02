@@ -38,6 +38,7 @@
     "nodemon": "^3.0.1",
     "prettier": "3.0.3",
     "prisma": "^5.3.1",
+    "prisma-markdown": "^1.0.0",
     "typescript": "^5.2.2"
   }
 }

@@ -34,3 +34,9 @@ model Chat {
   messages  Message[]
   createdAt DateTime  @default(now())
 }
+
+generator markdown {
+  provider = "prisma-markdown"
+  output   = "./README.md"
+  title    = "Messenger"
+}
