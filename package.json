@@ -6,8 +6,8 @@
   "type": "commonjs",
   "types": "./global.d.ts",
   "scripts": {
-    "start": "node ./lib/main.js",
-    "dev": "nodemon ./lib/main.js",
+    "start": "node ./src/main.js",
+    "dev": "nodemon ./src/main.js",
     "test": "echo no test specified",
     "eslint:check": "eslint .",
     "eslint:write": "eslint --fix .",
