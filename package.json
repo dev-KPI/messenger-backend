@@ -31,13 +31,13 @@
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.4.10",
-    "@types/node": "^20.6.3",
+    "@types/node": "^20.8.6",
     "eslint": "^8.50.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "nodemon": "^3.0.1",
     "prettier": "3.0.3",
-    "prisma": "^5.3.1",
+    "prisma": "^5.4.2",
     "prisma-markdown": "^1.0.0",
     "typescript": "^5.2.2"
   }
