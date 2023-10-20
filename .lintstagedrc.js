@@ -1,6 +1,9 @@
+const toRelative = require('./src/utils/relativePath.js');
+
 module.exports = {
   '*': 'prettier --check --ignore-unknown',
   '*.js': 'eslint --cache',
   '*.{js,ts}': () => 'npm run typescript:check',
-  '*.{js,ts}': () => 'npm run cspell',
+  '*': (files) =>
+    `cspell --show-suggestions --quiet --gitignore ${toRelative(files)}`,
 };
