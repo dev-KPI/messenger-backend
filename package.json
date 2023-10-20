@@ -34,12 +34,8 @@
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.4.10",
-<<<<<<< HEAD
     "@types/node": "^20.8.6",
-=======
-    "@types/node": "^20.6.3",
     "cspell": "^7.3.8",
->>>>>>> 2e065dd (added cspell)
     "eslint": "^8.50.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
