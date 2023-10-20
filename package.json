@@ -15,9 +15,7 @@
     "prettier:write": "prettier --write .",
     "typescript:check": "tsc -p tsconfig.json",
     "prepare": "husky install",
-    "cspell": "cspell lint \"src/**/*.js\"",
-    "cspell:apply": "cspell --words-only --unique \"src/**/*.js\" > project-words.txt",
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context  \"src/**/*.js\""
+    "cspell": "cspell --show-suggestions --show-context --gitignore ."
   },
   "author": "",
   "license": "MIT",
