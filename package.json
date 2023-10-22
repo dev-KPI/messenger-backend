@@ -14,7 +14,8 @@
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
     "typescript:check": "tsc -p tsconfig.json",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cspell": "cspell --show-suggestions --show-context --gitignore ."
   },
   "author": "",
   "license": "MIT",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@flydotio/dockerfile": "^0.4.10",
     "@types/node": "^20.8.6",
+    "cspell": "^7.3.8",
     "eslint": "^8.50.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
