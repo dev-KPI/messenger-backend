@@ -34,7 +34,7 @@
     "@flydotio/dockerfile": "^0.4.10",
     "@types/node": "^20.8.6",
     "cspell": "^7.3.8",
-    "eslint": "^8.50.0",
+    "eslint": "^8.52.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "nodemon": "^3.0.1",
