@@ -22,7 +22,7 @@
   "dependencies": {
     "@fastify/cors": "^8.3.0",
     "@fastify/websocket": "^8.2.0",
-    "@prisma/client": "^5.4.2",
+    "@prisma/client": "^5.5.2",
     "fastify": "^4.23.2",
     "pg": "^8.8.0",
     "pino": "^8.16.0",
