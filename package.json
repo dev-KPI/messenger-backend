@@ -1,14 +1,15 @@
 {
   "name": "messenger-back",
   "version": "1.0.0",
-  "description": "Learn Node.js with fun🤪",
-  "main": "index.js",
-  "type": "commonjs",
+  "description": "🦾 Back-end part of the messenger application.",
+  "main": "server.js",
   "types": "./global.d.ts",
+  "engines": {
+    "node": "18 || 20"
+  },
   "scripts": {
-    "start": "node ./src/main.js",
-    "dev": "nodemon ./src/main.js",
-    "test": "echo no test specified",
+    "start": "node server.js",
+    "test": "MODE=test node server.js",
     "eslint:check": "eslint .",
     "eslint:write": "eslint --fix .",
     "prettier:check": "prettier --check .",
@@ -17,30 +18,23 @@
     "prepare": "husky install",
     "cspell": "cspell --show-suggestions --show-context --gitignore ."
   },
-  "author": "",
   "license": "MIT",
   "dependencies": {
-    "@fastify/cors": "^8.3.0",
-    "@fastify/websocket": "^8.2.0",
-    "@prisma/client": "^5.4.2",
-    "fastify": "^4.23.2",
-    "pg": "^8.8.0",
-    "pino": "^8.16.0",
-    "pino-pretty": "^10.2.3",
-    "winston": "^3.10.0",
-    "ws": "^8.12.0"
+    "impress": "^3.0.11"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.4.10",
     "@types/node": "^20.8.6",
+    "@types/ws": "^8.5.5",
     "cspell": "^7.3.8",
     "eslint": "^8.50.0",
+    "eslint-config-metarhia": "^8.2.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "nodemon": "^3.0.1",
     "prettier": "3.0.3",
-    "prisma": "^5.4.2",
-    "prisma-markdown": "^1.0.0",
     "typescript": "^5.2.2"
   }
 }

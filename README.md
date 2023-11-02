@@ -1,1 +1,1 @@
-[ERD](./prisma/README.md)
+# 🦾 Back-end part of the messenger application
