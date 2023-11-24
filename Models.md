@@ -3,28 +3,37 @@
 ```mermaid
 erDiagram
 USER }o--o{ USER : contact
-CONFIG ||--|| USER : has
-MESSAGE }o--|| USER : write
-MESSAGE }o--o{ MESSAGE : "answer to"
-GROUP }o--o{ USER : joined
+USER ||--|| SETTINGS : has
+GROUP ||--|| SETTINGS : has
+USER ||--o{ MESSAGE : write
+MESSAGE }o--o| MESSAGE : "answer to"
+USER }o--o{ GROUP : "joined as role to"
+USER }o--o{ GROUP : "grouped groups into folder"
+MESSAGE ||--o{ GROUP : "written in"
+MEDIA }o--|| MESSAGE : "attached to"
 ```
 
 # Models
 
 `USER`: Represents individual users.  
-`CONFIG`: Represents configurations or settings.  
+`GROUP`: Represents a group of users.  
+`SETTINGS`: Represents user or group settings.  
 `MESSAGE`: Represents individual messages sent or received.  
-`GROUP`: Represents a group of users.
+`MEDIA`: Represents various forms of media that can be attached to messages.
 
 # Relations
 
 ## USER with USER
 
-Represents a many-to-many relationship between users, indicating that users can be in contact with multiple other users and vice versa. This could represent a social network-like relationship where users can communicate with each other.
+Represents a many-to-many relationship between users, indicating that users can be in contact with multiple other users and vice versa. This could signify connections or relationships between users.
 
-## USER with CONFIG
+## USER with SETTINGS
 
-This notation signifies a one-to-one relationship, indicating that each user has one specific configuration, and that configuration is owned by that user exclusively. This relationship implies a direct mapping between a user and their unique configuration settings within the system.
+Represents a one-to-one relationship between USER and SETTINGS, indicating that each user has one specific set of settings associated with them. Each user's settings are unique and directly linked to that user.
+
+## GROUP with SETTINGS
+
+Represents a one-to-one relationship between GROUP and SETTINGS, implying that each group has one specific set of settings associated with it.
 
 ## USER with MESSAGE
 
@@ -32,8 +41,20 @@ Represents a one-to-many relationship between USER and MESSAGE, indicating that 
 
 ## MESSAGE with MESSAGE
 
-Represents a many-to-many relationship between messages, indicating that a message can be an answer to multiple other messages, and vice versa. This could represent threaded or nested messages where one message is a reply to another.
+Represents a many-to-one relationship between messages, indicating that many messages can be responses or answers to a single specific message.
 
-## GROUP with USER
+## USER with GROUP
 
-Represents a many-to-many relationship between GROUP and USER, indicating that users can join multiple groups, and a group can have multiple users as members.
+Represents a many-to-many relationship between users and groups, where users can be associated with multiple groups, and a group can have multiple users in various roles.
+
+## USER with GROUP
+
+Represents a many-to-many relationship between users and groups, indicating that users can organize or group multiple groups into various folders, and a folder can contain multiple groups.
+
+## MESSAGE with GROUP
+
+Represents a one-to-many relationship between MESSAGE and GROUP, indicating that a message can be associated with one or more groups.
+
+## MEDIA with GROUP
+
+Represents a many-to-one relationship between MEDIA and MESSAGE, indicating that a message can have multiple types of media attached to it, but each media attachment belongs to only one message.
