@@ -17,8 +17,8 @@ MEDIA }o--|| MESSAGE : "attached to"
 
 `USER`: Represents individual users.  
 `GROUP`: Represents a group of users.  
-`USER_SETTINGS`: Represents user settings. 
-`GROUP_SETTINGS`: Represents group settings. 
+`USER_SETTINGS`: Represents user settings.
+`GROUP_SETTINGS`: Represents group settings.
 `MESSAGE`: Represents individual messages sent or received.  
 `MEDIA`: Represents various forms of media that can be attached to messages.
 
