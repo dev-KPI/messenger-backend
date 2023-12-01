@@ -3,13 +3,13 @@
 ```mermaid
 erDiagram
 USER }o--o{ USER : contact
-USER ||--|| SETTINGS : has
-GROUP ||--|| SETTINGS : has
+USER ||--|| USER_SETTINGS : has
+GROUP ||--|| GROUP_SETTINGS : has
 USER ||--o{ MESSAGE : write
 MESSAGE }o--o| MESSAGE : "answer to"
 USER }o--o{ GROUP : "joined as role to"
 USER }o--o{ GROUP : "grouped groups into folder"
-MESSAGE ||--o{ GROUP : "written in"
+MESSAGE }o--|| GROUP : "written in"
 MEDIA }o--|| MESSAGE : "attached to"
 ```
 
@@ -17,7 +17,8 @@ MEDIA }o--|| MESSAGE : "attached to"
 
 `USER`: Represents individual users.  
 `GROUP`: Represents a group of users.  
-`SETTINGS`: Represents user or group settings.  
+`USER_SETTINGS`: Represents user settings. 
+`GROUP_SETTINGS`: Represents group settings. 
 `MESSAGE`: Represents individual messages sent or received.  
 `MEDIA`: Represents various forms of media that can be attached to messages.
 
@@ -27,13 +28,13 @@ MEDIA }o--|| MESSAGE : "attached to"
 
 Represents a many-to-many relationship between users, indicating that users can be in contact with multiple other users and vice versa. This could signify connections or relationships between users.
 
-## USER with SETTINGS
+## USER with USER_SETTINGS
 
-Represents a one-to-one relationship between USER and SETTINGS, indicating that each user has one specific set of settings associated with them. Each user's settings are unique and directly linked to that user.
+Represents a one-to-one relationship between USER and USER_SETTINGS, indicating that each user has one specific set of settings associated with them. Each user's settings are unique and directly linked to that user.
 
-## GROUP with SETTINGS
+## GROUP with GROUP_SETTINGS
 
-Represents a one-to-one relationship between GROUP and SETTINGS, implying that each group has one specific set of settings associated with it.
+Represents a one-to-one relationship between GROUP and GROUP_SETTINGS, implying that each group has one specific set of settings associated with it.
 
 ## USER with MESSAGE
 
