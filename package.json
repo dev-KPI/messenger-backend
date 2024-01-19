@@ -8,6 +8,7 @@
     "node": "18 || 20"
   },
   "scripts": {
+    "dev": "node server.js",
     "start": "node server.js",
     "test": "MODE=test node server.js",
     "eslint:check": "eslint .",
